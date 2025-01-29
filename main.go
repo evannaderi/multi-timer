@@ -128,7 +128,7 @@ func (t *Timer) update() bool {
 	if t.state.currentTime <= 0 {
 		currentPhase := t.phases[t.state.currentPhase]
 		if t.state.isWork {
-			notify(t.state.name, fmt.Sprintf("Break: %s", t.state.notifText))
+			notify(t.state.name, fmt.Sprintf("b %s", t.state.notifText))
 			t.state.isWork = false
 			t.state.currentTime = currentPhase.BreakDuration
 		} else {
